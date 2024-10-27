@@ -6,7 +6,7 @@ const router = express.Router()
 router.post('/', async (req, res) =>{
     try{
         let newPost = new Post(req.body)
-        await new Post.save()
+        await newPost.save()
         res.json(newPost)
     } catch(err){
         console.error(err)
@@ -17,6 +17,8 @@ router.post('/', async (req, res) =>{
 router.get('/', async (req, res) =>{
     try {
         let allPosts = await (Post.find({}))
+        console.log("all posts: ", allPosts)
+        console.log(Post)
         res.json(allPosts)
     } catch(err){
         console.error(err)
@@ -36,7 +38,7 @@ router.put('/:id', async (req, res) =>{
 
 router.delete('/:id', async (req, res) =>{
     try {
-        let deletedPost = await UPost.findByIdAndDelete(req.params.id)
+        let deletedPost = await Post.findByIdAndDelete(req.params.id)
         res.json(deletedPost)
     } catch(err) {
         console.error(err)

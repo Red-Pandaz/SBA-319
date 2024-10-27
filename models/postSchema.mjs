@@ -11,6 +11,6 @@ const postSchema = new mongoose.Schema({
     }
 })
 
-postSchema.index({commenter: 1})
+postSchema.index({poster: 1})
 
 export default mongoose.model('Post', postSchema)
