@@ -20,6 +20,7 @@ router.get('/', async (req, res) =>{
         console.log("all posts: ", allPosts)
         console.log(Post)
         res.json(allPosts)
+        res.status(allPosts)
     } catch(err){
         console.error(err)
         res.status(500).json({ msg: 'Server Error'})
