@@ -10,7 +10,7 @@ export const posts = [
         "poster": 3
     },
     {
-        "psotId": 3,
+        "postId": 3,
         "postContent": "Test is a text post",
         "poster": 5 
     },
