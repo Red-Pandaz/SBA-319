@@ -2,7 +2,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
-// import connectDB from './db/conn.mjs'
+import connectDB from './db/conn.mjs'
 
 //setups
 const app = express();
@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3001;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ extended: true }));
 //routes
-// connectDB()
+connectDB()
 //listener
 app.listen(PORT, ()=>{
     console.log(`Server is running on port: ${PORT}`);
