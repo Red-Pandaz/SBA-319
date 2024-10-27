@@ -42,22 +42,27 @@ A database with 3 collections was made to mimic the structure of a basic web for
 **Delete** Submit a DELETE request to /posts/ID_TO_DELETE
 
 ### Users
-**Create**: Submit a POST request to /comments/ with the following body:
+**Create**: Submit a POST request to // with the following body:
 
 `{
-    "username": YOUR_NEW_USERNAME
+    "commentContent": COMMENT_CONTENT,
+    "postId": POST_ID
+    "commenter": USER_ID
 }`
 
-**Read**: Submit a GET request to /comments/
+**Read**: Submit a GET request to //
 
-**Update**: Submit a PUT request to /comments/ with the following body:
+**Update**: Submit a PUT request to // with the following body:
 
 `{
-    "username": UPDATED_USERNAME
+    "commentContent": UPDATED_COMMENT_CONTENT,
+    "postId": UPDATED_POST_ID
+    "commenter": UPDATED_USER_ID
 }`
 
 **Delete** Submit a DELETE request to /comments/ID_TO_DELETE
 
 ## Technologies Used
 MongoDB/Mongoose
+
 Express
