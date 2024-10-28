@@ -6,7 +6,7 @@ const router = express.Router()
 router.post('/', async (req, res) =>{
     try{
         let newComment = new Comment(req.body)
-        await new Comment.save()
+        await newComment.save()
         res.json(newComment)
     } catch(err){
         console.error(err)

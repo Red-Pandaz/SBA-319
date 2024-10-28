@@ -110,21 +110,22 @@
 
 // export default router;
 
-import express from 'express'
-import User from '../models/userSchema.mjs'
+import express from 'express';
+import User from '../models/userSchema.mjs';
 
-const router = express.Router()
+const router = express.Router();
 
-router.post('/', async (req, res) =>{
-    try{
-        let newUser = new User(req.body)
-        await new User.save()
-        res.json(newUser)
-    } catch(err){
-        console.error(err)
-        res.status(500).json({msg: 'Server Error'})
+router.post('/', async (req, res) => {
+    try {
+        let newUser = new User(req.body);
+        await newUser.save();  // Corrected this line
+        res.json(newUser);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ msg: 'Server Error' });
     }
-} )
+});
+
 
 router.get('/', async (req, res) =>{
     try {

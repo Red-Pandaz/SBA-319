@@ -46,7 +46,7 @@ A database with 3 collections was made to mimic the structure of a basic web for
 
 `{
     "commentContent": COMMENT_CONTENT,
-    "postId": POST_ID
+    "post": POST_ID
     "commenter": USER_ID
 }`
 
@@ -56,7 +56,7 @@ A database with 3 collections was made to mimic the structure of a basic web for
 
 `{
     "commentContent": UPDATED_COMMENT_CONTENT,
-    "postId": UPDATED_POST_ID
+    "post": UPDATED_POST_ID
     "commenter": UPDATED_USER_ID
 }`
 
